@@ -15,7 +15,7 @@
 
     <div class="container">
         <div class="row">
-            <div class="col-6">
+            <div class="col-12">
                 <h1>
                     Comic Title: {{$comic->title}}
                 </h1>
