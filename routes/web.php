@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\MovieController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Admin\MovieController as AdminMovieController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,3 +16,4 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', [MovieController::class, 'index'])->name('guest.index');
+Route::resource('/admin/movies', AdminMovieController::class);
