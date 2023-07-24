@@ -5,13 +5,13 @@
 @section('main-section')
 
     {{-- Jumbo  --}}
-    <div class="my_jumbo d-flex align-items-center ps-5">
+    {{-- <div class="my_jumbo d-flex align-items-center ps-5">
         <div class="j-txt-box">
             <h5 class="text-uppercase">
                 Welcome to Comics 
             </h5>
         </div>
-    </div>
+    </div> --}}
 
     <div class="container">
         <div class="row">
@@ -25,6 +25,7 @@
                           <th scope="col">Series</th>
                           <th scope="col">Type</th>
                           <th scope="col">Sale Date</th>
+                          <th scope="col">View</th>
                         </tr>
                     </thead>
 
@@ -37,6 +38,7 @@
                             <td>{{$comic->series}}</td>
                             <td>{{$comic->type}}</td>
                             <td>{{$comic->sale_date}}</td>
+                            <td><a class="btn btn-primary" href="#" role="button">View</a></td>
                         </tr>
                         @endforeach
                       </tbody>
