@@ -14,4 +14,4 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', MovieController::class, 'home')->name('guest.movies.index');
+Route::get('/', MovieController::class, 'index')->name('guest.index');
