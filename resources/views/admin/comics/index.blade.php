@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title','Welcome')
+@section('title','Admin Comics Index')
 
 @section('main-section')
 
@@ -10,28 +10,37 @@
             <h5 class="text-uppercase">
                 Welcome to Comics 
             </h5>
-            <h2>
-                Best Online Template for Laravel
-            </h2>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veniam distinctio fugit illo, odio at laborum rem nesciunt. Molestiae delectus incidunt saepe tempora, ullam provident numquam nemo neque nesciunt voluptatum soluta.</p>
-            <button type="button" class="btn btn-success">Success</button>
-            <button type="button" class="btn btn-light">Light</button>
-        </div> 
+        </div>
     </div>
 
-    <div class="my_container d-flex m-5 my_line">
-        <img class="img-" src="https://images.pexels.com/photos/13096925/pexels-photo-13096925.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2s" alt="">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                          <th scope="col">Title</th>
+                          <th scope="col">Description</th>
+                          <th scope="col">Price</th>
+                          <th scope="col">Series</th>
+                          <th scope="col">Type</th>
+                          <th scope="col">Sale Date</th>
+                        </tr>
+                    </thead>
 
-        <div>
-            <h5>
-                Impara qualcosa
-            </h5>
-            <h1>
-                I Benefit di avere un buon Template
-            </h1>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eius mollitia unde tempora deleniti temporibus, atque sequi ullam ipsa delectus ad quia necessitatibus ducimus veritatis minima est repudiandae earum quaerat sapiente!</p>
-            <div>
-                {{-- <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/2021_Facebook_icon.svg/2048px-2021_Facebook_icon.svg.png" alt=""> --}}
+                      <tbody>
+                        @foreach ( $comicList as $comic)
+                        <tr>
+                            <th scope="row">{{$comic->title}}</th>
+                            <td>{{$comic->description}}</td>
+                            <td>{{$comic->price}}</td>
+                            <td>{{$comic->series}}</td>
+                            <td>{{$comic->type}}</td>
+                            <td>{{$comic->sale_date}}</td>
+                        </tr>
+                        @endforeach
+                      </tbody>
+                </table>
             </div>
         </div>
     </div>
