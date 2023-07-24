@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title','Admin Comics Index')
+@section('title','Admin Comics Show')
 
 @section('main-section')
 
@@ -15,6 +15,11 @@
 
     <div class="container">
         <div class="row">
+            <div class="col-6">
+                <h1>
+                    Comic Title: {{$comic->title}}
+                </h1>
+            </div>
             <div class="col-12">
                 <table class="table table-hover">
                     <thead>
@@ -30,7 +35,6 @@
                     </thead>
 
                       <tbody>
-                        @foreach ( $comicList as $comic)
                         <tr>
                             <th scope="row">{{$comic->title}}</th>
                             <td>{{$comic->description}}</td>
@@ -38,9 +42,8 @@
                             <td>{{$comic->series}}</td>
                             <td>{{$comic->type}}</td>
                             <td>{{$comic->sale_date}}</td>
-                            <td><a class="btn btn-primary" href="{{route('admin.comics.show', $comic->id}}" role="button">View</a></td>
+                            <td><a class="btn btn-primary" href="#" role="button">View</a></td>
                         </tr>
-                        @endforeach
                       </tbody>
                 </table>
             </div>

@@ -16,6 +16,6 @@ use App\Http\Controllers\Admin\ComicController as AdminComicController;
 */
 
 Route::get('/', [ComicController::class, 'index'])->name('guest.index');
-Route::resource('/admin/comics', AdminComicController::class);
-// Route::get('/admin/movies', [AdminMovieController::class, 'index'])->name('admmin.movie.index');
-// Route::get('/admin/movies/{id}', [AdminMovieController::class, 'show'])->name('admmin.movie.show');
+// Route::resource('/admin/comics', AdminComicController::class);
+Route::get('/admin/movies', [AdminComicController::class, 'index'])->name('admmin.comic.index');
+Route::get('/admin/movies/{id}', [AdminComicController::class, 'show'])->name('admmin.comic.show');
