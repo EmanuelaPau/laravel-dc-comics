@@ -15,12 +15,13 @@ return new class extends Migration {
         Schema::create('comics', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
-            $table->string('title', 60);
-            $table->string('description', 500);
-            $table->string('price', 9);
-            $table->string('series', 20);
-            $table->string('type', 20);
+            $table->string('title', 200);
+            $table->string('description', 1500);
+            $table->string('price', 12);
+            $table->string('series', 100);
+            $table->string('type', 100);
             $table->date('sale_date');
+            // $table->string('thumb', 500);
 
         });
     }
@@ -32,6 +33,6 @@ return new class extends Migration {
      */
     public function down()
     {
-        Schema::dropIfExists('comics');
+        Schema::dropIfExists('new_comics');
     }
 };
