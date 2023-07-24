@@ -1,8 +1,8 @@
 <?php
 
-use App\Http\Controllers\MovieController;
+use App\Http\Controllers\ComicController;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\Admin\MovieController as AdminMovieController;
+use App\Http\Controllers\Admin\ComicController as AdminComicController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,5 +15,7 @@ use App\Http\Controllers\Admin\MovieController as AdminMovieController;
 |
 */
 
-Route::get('/', [MovieController::class, 'index'])->name('guest.index');
-Route::resource('/admin/movies', AdminMovieController::class);
+Route::get('/', [ComicController::class, 'index'])->name('guest.index');
+Route::resource('/admin/movies', AdminComicController::class);
+// Route::get('/admin/movies', [AdminMovieController::class, 'index'])->name('admmin.movie.index');
+// Route::get('/admin/movies/{id}', [AdminMovieController::class, 'show'])->name('admmin.movie.show');
