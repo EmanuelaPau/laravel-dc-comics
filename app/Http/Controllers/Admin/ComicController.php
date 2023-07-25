@@ -42,6 +42,7 @@ class ComicController extends Controller
     {
         //prendo i valori
         $data = $request->all;
+        // dd($data);
         // Creo un'/istanza del nuovo modello
         $newComic = new Comic();
         // Popolo il nuovo modello 
@@ -54,7 +55,7 @@ class ComicController extends Controller
         // Salvo nel db
         $newComic->save();
 
-        return redirect()->route('admmin.comic.show', $newComic->id);
+        return redirect()->route('admin.comic.show', $newComic->id);
     }
 
     /**

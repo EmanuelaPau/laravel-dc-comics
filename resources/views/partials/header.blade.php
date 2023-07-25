@@ -15,10 +15,10 @@
                 <a class="nav-link" href="#">Home</a>
                 </li>
                 <li class="nav-item">
-                <a class="nav-link" href="#">Features</a>
+                <a class="nav-link" href="{{route('admin.comics.index')}}">Comics List</a>
                 </li>
                 <li class="nav-item">
-                <a class="nav-link" href="#">Pricing</a>
+                <a class="nav-link" href="{{route('admin.comics.create')}}">Create new Comic</a>
                 </li>
                 <li class="nav-item">
                 <a class="nav-link disabled" href="#">Disabled</a>

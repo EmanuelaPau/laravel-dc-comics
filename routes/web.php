@@ -17,7 +17,9 @@ use App\Http\Controllers\Admin\ComicController as AdminComicController;
 
 Route::get('/', [ComicController::class, 'index'])->name('guest.index');
 // Route::resource('/admin/comics', AdminComicController::class);
-Route::get('/admin/comics', [AdminComicController::class, 'index'])->name('admmin.comic.index');
-Route::get('/admin/comics/create', [AdminComicController::class, 'create'])->name('admmin.comic.create');
-Route::post('/admin/comics/store', [AdminComicController::class, 'create'])->name('admmin.comic.store');
-Route::get('/admin/comics/{id}', [AdminComicController::class, 'show'])->name('admmin.comic.show');
+Route::get('/admin/comics', [AdminComicController::class, 'index'])->name('admin.comics.index');
+
+Route::get('/admin/comics/create', [AdminComicController::class, 'create'])->name('admin.comics.create');
+Route::post('/admin/comics', [AdminComicController::class, 'store'])->name('admin.comics.store');
+
+Route::get('/admin/comics/{id}', [AdminComicController::class, 'show'])->name('admmin.comics.show');
