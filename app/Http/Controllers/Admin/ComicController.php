@@ -17,7 +17,7 @@ class ComicController extends Controller
     {
         //
         // return 'ciao';
-        $comicList = Comic::paginate(3);
+        $comicList = Comic::paginate(20);
         return view('admin.comics.index', compact('comicList'));
     }
 
@@ -46,12 +46,16 @@ class ComicController extends Controller
         // Creo un'/istanza del nuovo modello
         $newComic = new Comic();
         // Popolo il nuovo modello 
-        $newComic->title = $data['title'];
-        $newComic->description = $data['description'];
-        $newComic->price = $data['price'];
-        $newComic->series = $data['series'];
-        $newComic->type = $data['type'];
-        $newComic->sale_date = $data['sale_date'];
+        // $newComic->title = $data['title'];
+        // $newComic->description = $data['description'];
+        // $newComic->price = $data['price'];
+        // $newComic->series = $data['series'];
+        // $newComic->type = $data['type'];
+        // $newComic->sale_date = $data['sale_date'];
+
+        // Popolo il modello con le fillable 
+        $newComic->fill($data);
+
         // Salvo nel db
         $newComic->save();
 
