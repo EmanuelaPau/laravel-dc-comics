@@ -41,7 +41,7 @@ class ComicController extends Controller
     public function store(Request $request)
     {
         //prendo i valori
-        $data = $request->all;
+        $data = $request->all();
         // dd($data);
         // Creo un'/istanza del nuovo modello
         $newComic = new Comic();
@@ -55,7 +55,7 @@ class ComicController extends Controller
         // Salvo nel db
         $newComic->save();
 
-        return redirect()->route('admin.comic.show', $newComic->id);
+        return redirect()->route('admin.comics.show', $newComic->id);
     }
 
     /**
