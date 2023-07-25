@@ -14,7 +14,7 @@
 
         <div class="row mb-3">
             <div class="col-9 m-auto">
-                <form action="{{route('admmin.comic.create')}}" method="POST">
+                <form action="{{route('admmin.comic.store')}}" method="POST">
                     @csrf
                     <div class="mb-3">
                         <label for="title" class="form-label">Write here the Comic Title</label>
