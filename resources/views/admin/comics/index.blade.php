@@ -55,11 +55,11 @@
                             <th scope="row">{{$comic->title}}</th>
                             <td>{{$comic->description}}</td>
                             <td>{{$comic->price}}</td>
-                            <td>{{$comic->series}}</td>
+                            <td>{{$comic->series}}</td> 
                             <td>{{$comic->type}}</td>
                             <td>{{$comic->sale_date}}</td>
                             <td><a class="btn btn-primary mb-2" href="{{ route('admin.comics.show', $comic->id)}}" role="button">View</a>
-                                <a class="btn btn-warning mb-2" href="{{ route('admin.comics.show', $comic->id)}}" role="button">Edit</a>
+                                <a class="btn btn-warning mb-2" href="{{route('admin.comics.edit', $comic->id)}}" role="button">Edit</a>
                                <form action="{{ route('admin.comics.destroy', $comic->id)}}" method="POST">
                                 @csrf
                                 @method('DELETE')
