@@ -42,7 +42,7 @@
                         <input type="text" class="form-control" id="sale_date" aria-describedby="emailHelp" name="sale_date" value="{{$comic->sale_date}}">
                     </div>
 
-                    <button type="submit" class="btn btn-primary">Submit</button>
+                    <button type="submit" class="btn btn-primary">Update</button>
 
                     <button type="reset" class="btn btn-warning">Reset</button>
                 </form>
