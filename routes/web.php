@@ -25,3 +25,4 @@ Route::post('/admin/comics', [AdminComicController::class, 'store'])->name('admi
 Route::get('/admin/comics/{id}', [AdminComicController::class, 'show'])->name('admin.comics.show');
 Route::get('/admin/comics/{id}/edit', [AdminComicController::class, 'edit'])->name('admin.comics.edits');
 Route::put('/admin/comics/{$id}', [AdminComicController::class, 'update'])->name('admin.comics.update');
+Route::delete('/admin/comics/{$id}', [AdminComicController::class, 'destroy'])->name('admin.comics.destroy');
