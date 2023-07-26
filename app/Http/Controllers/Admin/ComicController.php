@@ -104,7 +104,7 @@ class ComicController extends Controller
 
         $comic->update($data);
 
-        return redirect()->route('admin.comics.show', $comic->id);
+        return redirect()->route('admin.comics.show', $comic->id)->with('updated', $comic->name);
     }
     /**
      * Remove the specified resource from storage.
@@ -117,7 +117,7 @@ class ComicController extends Controller
         //
         $comic = Comic::findOrFail($id);
         $comic->delete();
-        return redirect()->route('admin.users.index'->with('delete', $comic->name));
+        return redirect()->route('admin.users.index')->with('delete', $comic->name);
 
     }
 }

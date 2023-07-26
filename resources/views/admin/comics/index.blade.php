@@ -21,6 +21,19 @@
                     Comic {{session('delete')}} has been deleted succesfully
                 </div>
                 @endif
+
+                @if (session('created'))
+                <div class="alert alert-success">
+                    Comic {{session('created')}} has been created succesfully
+                </div>
+                @endif
+
+                @if (session('updated'))
+                <div class="alert alert-success">
+                    Comic {{session('updated')}} has been edited succesfully
+                </div>
+                @endif
+
             </div>
             <div class="col-12">
                 <table class="table table-hover">
