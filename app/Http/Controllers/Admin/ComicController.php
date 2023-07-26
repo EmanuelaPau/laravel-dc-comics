@@ -118,7 +118,7 @@ class ComicController extends Controller
         //
         $comic = Comic::findOrFail($id);
         $comic->delete();
-        return redirect()->route('admin.users.index')->with('delete', $comic->name);
+        return redirect()->route('admin.comics.index')->with('delete', $comic->name);
 
     }
 }

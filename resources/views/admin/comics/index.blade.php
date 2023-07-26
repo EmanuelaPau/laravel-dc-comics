@@ -61,7 +61,7 @@
                             <td><a class="btn btn-primary mb-2" href="{{ route('admin.comics.show', $comic->id)}}" role="button">View</a>
                                 <a class="btn btn-warning mb-2" href="{{ route('admin.comics.show', $comic->id)}}" role="button">Edit</a>
                                <form action="{{ route('admin.comics.destroy', $comic->id)}}" method="POST">
-                                @carf
+                                @csrf
                                 @method('DELETE')
                                 <button class="btn btn-danger mb-2" role="button">Delete</button></td>
                                </form>
