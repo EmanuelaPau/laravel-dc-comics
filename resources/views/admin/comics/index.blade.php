@@ -40,7 +40,11 @@
                             <td>{{$comic->sale_date}}</td>
                             <td><a class="btn btn-primary mb-2" href="{{ route('admin.comics.show', $comic->id)}}" role="button">View</a>
                                 <a class="btn btn-warning mb-2" href="{{ route('admin.comics.show', $comic->id)}}" role="button">Edit</a>
-                                <a class="btn btn-danger mb-2" href="{{ route('admin.comics.show', $comic->id)}}" role="button">Delete</a></td>
+                               <form action="{{ route('admin.comics.destroy', $comic->id)}}" method="POST">
+                                @carf
+                                @method('DELETE')
+                                <button class="btn btn-danger mb-2" role="button">Delete</button></td>
+                               </form>
                         </tr>
                         @endforeach
                       </tbody>
