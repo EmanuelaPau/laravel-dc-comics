@@ -95,12 +95,16 @@ class ComicController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, int $id)
     {
         //
+        $data = $request->all();
+        $comic = Comic::findOrFail($id);
 
+        $comic->update($data);
+
+        return redirect()->route('admin.comics.show', $comic->id);
     }
-
     /**
      * Remove the specified resource from storage.
      *
