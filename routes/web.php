@@ -23,3 +23,4 @@ Route::get('/admin/comics/create', [AdminComicController::class, 'create'])->nam
 Route::post('/admin/comics', [AdminComicController::class, 'store'])->name('admin.comics.store');
 
 Route::get('/admin/comics/{id}', [AdminComicController::class, 'show'])->name('admin.comics.show');
+Route::get('/admin/comics/{id}/edit', [AdminComicController::class, 'edit'])->name('admin.comics.edits');
