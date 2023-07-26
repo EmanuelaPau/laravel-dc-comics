@@ -14,7 +14,7 @@
 
         <div class="row mb-3">
             <div class="col-9 m-auto">
-                <form action="{{route('admin.comics.store')}}" method="POST">
+                <form action="{{route('admin.comics.update')}}" method="POST">
                     @csrf
                     @method("PUT")
                     <div class="mb-3">
