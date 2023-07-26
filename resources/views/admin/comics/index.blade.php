@@ -16,6 +16,13 @@
     <div class="container">
         <div class="row">
             <div class="col-12">
+                @if (session('delete'))
+                <div class="alert alert-warning">
+                    Comic {{session('delete')}} has been deleted succesfully
+                </div>
+                @endif
+            </div>
+            <div class="col-12">
                 <table class="table table-hover">
                     <thead>
                         <tr>
