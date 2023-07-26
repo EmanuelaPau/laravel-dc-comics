@@ -84,6 +84,7 @@ class ComicController extends Controller
     public function edit($id)
     {
         //
+        // @dd($id);
         $comic = Comic::findOrFail($id);
         return view('admin.comics.edit', compact('comic'));
     }
@@ -97,7 +98,7 @@ class ComicController extends Controller
      */
     public function update(Request $request, int $id)
     {
-        // @dd($id)
+
         //
         $data = $request->all();
         $comic = Comic::findOrFail($id);
